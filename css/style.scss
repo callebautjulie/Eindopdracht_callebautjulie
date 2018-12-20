@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,700');
+
+$color1: rgb(251, 254, 255);
+$color2: rgb(249, 255, 197);
+$color3: rgba(211, 211, 211, 0.76);
+$color4: rgb(255, 254, 199);
+$color5: rgb(0, 26, 172);
+$color6: rgb(255, 253, 108);
+
+
+$alpha1: 0.5;
+$alpha2: 1;
+
+$fontset1: 'Bowlby One SC',
+cursive;
+$fontset2: 'Josefin Sans';
+
+$breekpunt: 560px;
+$breekpunt1: 770px;
+$breekpunt2: 440px;
+
+.nav-link {
+    padding-right: 1em !important;
+    color: white !important;
+    /* wat extra padding rechts, je ziet via inspector dat bootstrap de waarde 0.5em meegeeft */
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: $color6 !important;
+}
+
+
+h1 {
+    text-transform: uppercase;
+    font-family: $fontset1;
+    font-size: 60pt;
+    color: $color1;
+
+    @media (max-width: $breekpunt1) {
+        font-size: 50px;
+    }
+
+    @media (max-width: $breekpunt2) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-family: $fontset1;
+    font-size: 25pt;
+    color: $color1;
+}
+
+p {
+    font-family: $fontset2;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map {
+    margin-bottom: 100px;
+}
+
+.btn {
+    margin-top: 20px;
+    text-transform: uppercase;
+    width: 100%;
+    color: $color5;
+}
+
+.btn:hover {
+    background-color: $color5;
+    color: white;
+}
+
+.vraagtekens {
+    width: 100%;
+}
+
+.patroon {
+    width: 100%;
+}
+
+.audio {
+    width: 100%;
+}
+
+.slide {
+    margin-top: 70px;
+}
+
+.druppels {
+    width: 80%;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: $color2;
+    align-content: center;
+}
+
+.naam {
+    color: $color5;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: $fontset2;
+    font-size: 30px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+#panel,
+#flip {
+    padding: 25px;
+    text-align: center;
+    font-family: $fontset1;
+    font-size: 50px;
+    color: $color5;
+
+}
+
+#panel,
+#flip:hover {
+    padding: 25px;
+    text-align: center;
+    font-family: $fontset1;
+    font-size: 50px;
+    color: $color6;
+
+}
+
+#panel {
+    padding: 20px;
+    display: none;
+    margin-bottom: 5px;
+    background-color: $color2;
+}
+
+.fellow {
+    width: 100%;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical
+        /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: rgb(255, 255, 255);
+    color: $color5;
+    padding: 10px 20px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 1px;
+    border-color: $color5;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: $color5;
+    color: white;
+}
+
+.container {
+    padding-top: 70px;
+}
+
+/* --------- FOOTER -------*/
+footer.foeter {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+    bottom: 0px;
+    width: 100%;
+    height: 40px;
+    background-color: $color5;
+    color: white;
+}
+
+.linkerkant {
+    line-height: 40px;
+}
+
+.rechterkant i {
+    margin-left: 10px;
+    font-size: 1.5em;
+    line-height: 40px;
+}
+
+body {
+    background-image: url("../images/sky.png");
+    background-size: cover;
+}
+
+
+/* MEDIA QUERIES
+*********************************************/
+
+
+/* Extra small devices (portrait phones, less than 576px)
+/ No media query since this is the default in Bootstrap*/
+
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (max-width: 576px) {}
+
+
+/* Medium devices (tablets, 768px and up)*/
+
+@media (max-width: 768px) {}
+
+
+/* Large devices (desktops, 992px and up)*/
+
+@media (max-width: 992px) {}
+
+
+/* Extra large devices (large desktops, 1200px and up)*/
+
+@media (max-width: 1200px) {}
